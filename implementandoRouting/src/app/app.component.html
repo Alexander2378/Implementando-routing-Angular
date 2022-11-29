@@ -1,0 +1,19 @@
+<header>
+<ul>
+    
+    <li class="menu sobreMi" ><a [routerLink]="['/sobreMi']" routerLinkActive="active" >Sobre Mi</a></li>
+    <li class="menu proyecto" ><a [routerLink]="['/proyectos']" routerLinkActive="active" >Proyectos</a></li>
+    <li class="logo"><a class="af"  href="" >AF</a></li>
+    <li class="menu crear"><a  [routerLink]="['/crearProyectos']" routerLinkActive="active" >Crear proyectos</a></li>
+    <li class="menu contacto"><a  [routerLink]="['/contacto']" routerLinkActive="active" > Contacto</a></li>
+   
+</ul>
+</header>
+
+<section class="content">
+<router-outlet></router-outlet>
+</section>
+
+<footer >
+     Angular Footer
+</footer>

@@ -1,0 +1,223 @@
+:root{
+    --fondo: rgb(135, 135, 135);
+    --letras: rgb(55, 52, 52);
+ 
+}
+
+/* importando fuentes */
+@font-face {
+    font-family: "Dosis" ;
+    src: url("./assets/fuentes/Dosis.ttf");
+}
+
+@font-face {
+    font-family: "Lobster" ;
+    src: url("./assets/fuentes/Lobster.ttf");
+}
+
+/* generales */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--fondo);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url("./assets/IMG/Wavy_Bus-15_Single-01.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--letras)
+}
+
+
+
+/* Barra de navegacion */
+
+
+header{
+    width: 100%;
+    height: auto;
+    position:fixed;
+    background-color: var(--fondo);
+    text-transform: uppercase; 
+    
+
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: inherit;
+}
+
+header li{
+    padding: 2.3rem 0.2rem;
+    list-style: none;
+}
+
+
+header a{
+    display: block;
+    height: inherit;
+    text-decoration: none;
+    transition: all 300ms;
+    color: rgb(186, 101, 26);
+   font-size: 1rem;
+}
+
+a:hover, .active{
+    
+    transform: scale(1.3, 1.3); 
+    color: var(--letras);
+}
+
+
+.logo { 
+    
+    font-size: 1.5rem;
+    font-family: Lobster; 
+}
+
+.logo, .af:hover{
+    color: var(--letras);
+    background: transparent;
+    transform: scale(2, 2);
+}
+
+
+/* Contenedor principal */
+
+.content{
+   background-color: rgba(244, 243, 243, 0.8); 
+   min-height: 720px;
+   width: 90%;
+   display: flex;
+   margin: 0 auto;
+   padding-top: 8rem;
+   justify-content: center;
+   box-shadow: 0px 0px 40px black ;
+   border-left: 1px black solid;
+   border-right: 1px black solid;
+   border-bottom: 1px black solid;
+   
+}
+
+/* pie da pagina footer */
+
+footer{
+    background-color: var(--fondo);
+    width: 100%;
+    height: 3rem;
+    margin: 1rem auto 0 auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 40px black ;
+   
+
+}
+
+
+
+/* sobre mi */
+
+.presentacion{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.presentacion h1{
+    font-size: 3rem;
+    font-family: "Lobster";
+    border-bottom: 2px black solid;
+}
+
+.Mi{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium';
+    padding-left: 3rem;
+}
+
+.descripcion{
+    padding: 1rem 3rem 1rem 3rem;
+    justify-content: center;
+    
+}
+
+/* Formulario Crear proyecto */
+
+.titulo{
+
+    display: block;
+    border-bottom: 1px solid var(--letras);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--letras);
+}
+
+
+form{
+    width: 100%;
+}
+
+.datos{
+    
+    border: solid 1px var(--fondo);
+    margin-bottom: 0.6rem;
+    height: 2rem;
+    background-color: rgba(255, 217, 184, 0.5);
+    border-radius: 10px;
+ 
+}
+
+label{
+    color: var(--letras);
+    display: block;
+
+}
+
+.button{
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(186, 101, 26) ;
+    color: var(--letras);
+    border: solid 1px  ;
+    height: 2rem;
+    width: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+input[disabled]{
+    opacity: 0.3 ;
+    cursor:not-allowed;
+}
+
+.button:hover{
+
+    transition: all 300ms;
+    cursor: pointer;
+    height: 2.2rem;
+    width: 4.5rem;
+    font-size: 1rem;
+    background-color: rgb(186, 101, 26, 0.9) ;
+    
+}
+
+
+span{
+    background-color: rgb(232, 59, 59);
+    color: aliceblue;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+}

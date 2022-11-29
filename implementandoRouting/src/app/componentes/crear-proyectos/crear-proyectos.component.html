@@ -1,0 +1,57 @@
+<div class="titulo"> 
+    <h2> {{title}} </h2>
+</div>
+
+<form  #proyectForm="ngForm" (ngSubmit)="onSubmit(proyectForm)" >
+    
+    <p>
+        <label for="name" > Nombre </label>
+        <input class="datos" type="text" name="name"  #name="ngModel"  [(ngModel)]="proyect.name"  required/>
+        <span *ngIf="name.touched && !name.valid">
+            El campo nombre es obligatorio.
+        </span>
+    </p>
+
+    <p>
+        <label for="description" > Description </label>
+        <textarea class="datos" name="description"  #description="ngModel"  [(ngModel)]="proyect.description" required></textarea>
+        <span *ngIf="description.touched && !description.valid">
+            El campo description es obligatorio.
+        </span>
+    </p>
+
+    <p>
+        <label for="category" > Category </label>
+        <input  class="datos"type="text" name="category"  #category="ngModel"  [(ngModel)]="proyect.category" required/>
+        <span *ngIf=" category.touched && !category.valid">
+            El campo category es obligatorio
+        </span>
+    </p>
+
+    <h2>Alexander</h2> 
+    <p>
+        <label for="year" > Year </label>
+        <input class="datos" type="number" name="year"  #year="ngModel"  [(ngModel)]="proyect.year" required/>
+        <span *ngIf=" year.touched && !year.valid">
+            El campo year es obligatorio.
+        </span>
+    </p>
+
+    <p>
+        <label for="lang" > Lang </label>
+        <input class="datos " type="text" name="lang"  #lang="ngModel"  [(ngModel)]="proyect.langs" required/>
+        <span *ngIf=" lang.touched && !lang.valid">
+            El campo lang es obligatorio.
+        </span>
+    </p>
+
+    <p>
+        <label for="image "> Image the proyect </label>
+        <input  class="file" type="file" name="image"  placeholder="Submit image" />
+    </p>
+
+
+
+ <input type="submit" value="enviar" class="button" [disabled]="!proyectForm.form.valid" />
+
+</form>
